@@ -1,0 +1,331 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-6xl px-4 py-6 sm:px-6;
+  }
+
+  .page-title {
+    @apply mb-6 text-2xl font-bold text-gray-900 sm:text-3xl;
+  }
+
+  .navbar {
+    @apply sticky top-0 z-40 flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 bg-white px-4 py-3 shadow-sm sm:px-6;
+  }
+
+  .logo {
+    @apply text-lg font-bold text-blue-600 no-underline;
+  }
+
+  .menu-btn {
+    @apply rounded-lg border border-gray-300 px-3 py-2 text-xl md:hidden;
+  }
+
+  .nav-links {
+    @apply hidden w-full flex-col gap-2 md:flex md:w-auto md:flex-row md:items-center md:gap-4;
+  }
+
+  .nav-links.show {
+    @apply flex;
+  }
+
+  .nav-links a {
+    @apply rounded-lg px-3 py-2 text-sm font-medium text-gray-700 no-underline hover:bg-gray-100;
+  }
+
+  .nav-links a.active {
+    @apply bg-blue-50 text-blue-700;
+  }
+
+  .card {
+    @apply rounded-xl border border-gray-200 bg-white p-4 shadow-sm sm:p-6;
+  }
+
+  .stats {
+    @apply mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4;
+  }
+
+  .stat {
+    @apply rounded-xl border border-gray-200 bg-white p-4 text-center shadow-sm;
+  }
+
+  .stat h3 {
+    @apply text-2xl font-bold text-gray-900;
+  }
+
+  .stat p {
+    @apply text-sm text-gray-500;
+  }
+
+  .grid-2 {
+    @apply grid gap-4 md:grid-cols-2;
+  }
+
+  .row {
+    @apply flex items-start justify-between gap-3 border-b border-gray-100 py-3 last:border-0;
+  }
+
+  .badge {
+    @apply inline-block rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-700;
+  }
+
+  .muted {
+    @apply text-sm text-gray-500;
+  }
+
+  .center-text {
+    @apply text-center;
+  }
+
+  .form-grid {
+    @apply grid gap-4 sm:grid-cols-2;
+  }
+
+  .form-grid .full {
+    @apply sm:col-span-2;
+  }
+
+  .form-grid label {
+    @apply mb-1 block text-sm font-medium text-gray-700;
+  }
+
+  .form-grid input,
+  .form-grid select,
+  .form-grid textarea,
+  .toolbar input,
+  .toolbar select {
+    @apply w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-60;
+  }
+
+  .btn-outline {
+    @apply border border-blue-600 bg-white text-blue-600 hover:bg-blue-50;
+  }
+
+  .btn-small {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700;
+  }
+
+  .toolbar {
+    @apply mb-4 flex flex-col gap-3 sm:flex-row;
+  }
+
+  .list {
+    @apply space-y-3;
+  }
+
+  .item {
+    @apply flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between;
+  }
+
+  .alert {
+    @apply rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700;
+  }
+
+  .alert.success {
+    @apply border-green-200 bg-green-50 text-green-800;
+  }
+
+  .profile-top {
+    @apply flex items-center gap-4;
+  }
+
+  .avatar-lg {
+    @apply flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-xl font-bold text-white;
+  }
+
+  .avatar-img {
+    @apply h-16 w-16 rounded-full object-cover border-2 border-blue-200;
+  }
+
+  .avatar-nav {
+    @apply h-7 w-7 rounded-full object-cover inline-block mr-1 align-middle;
+  }
+
+  .profile-nav {
+    @apply inline-flex items-center gap-1;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .table-wrap {
+    @apply overflow-x-auto;
+  }
+
+  .table-wrap table {
+    @apply w-full min-w-[280px] text-left text-sm;
+  }
+
+  .table-wrap th {
+    @apply border-b border-gray-200 pb-2 font-semibold text-gray-700;
+  }
+
+  .table-wrap td {
+    @apply border-b border-gray-100 py-2;
+  }
+
+  .illustration {
+    @apply h-48 w-48 max-w-full sm:h-56 sm:w-56;
+  }
+
+  .exercise-block {
+    @apply rounded-lg border border-dashed border-gray-300 p-3 sm:col-span-2;
+  }
+
+  .filter-row {
+    @apply mb-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .day-nav {
+    @apply mb-4 flex flex-wrap items-center justify-between gap-3;
+  }
+
+  .meal-section {
+    @apply mb-6;
+  }
+
+  .meal-section h2 {
+    @apply mb-2 text-lg font-semibold capitalize;
+  }
+
+  .quick-links {
+    @apply mb-6 flex flex-wrap gap-2;
+  }
+
+  .quick-links a {
+    @apply rounded-lg bg-blue-50 px-3 py-2 text-sm font-medium text-blue-700 no-underline hover:bg-blue-100;
+  }
+
+  .tab-row {
+    @apply mb-4 flex flex-wrap gap-2;
+  }
+
+  .bell-link {
+    @apply relative inline-flex items-center;
+  }
+
+  .bell-badge {
+    @apply ml-1 inline-flex min-w-[1.25rem] items-center justify-center rounded-full bg-red-600 px-1 text-xs text-white;
+  }
+
+  .reminder-banner {
+    @apply fixed bottom-4 left-1/2 z-50 max-w-md -translate-x-1/2 rounded-lg bg-blue-600 px-4 py-3 text-center text-sm text-white shadow-lg;
+  }
+
+  .unread-note {
+    @apply border-l-4 border-blue-500;
+  }
+
+  .day-chips {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .chip {
+    @apply rounded-full border border-gray-300 px-3 py-1 text-xs;
+  }
+
+  .chip.active {
+    @apply border-blue-600 bg-blue-50 text-blue-700;
+  }
+
+  .faq-item {
+    @apply border-b border-gray-100 py-2;
+  }
+
+  .faq-q {
+    @apply w-full text-left font-medium;
+  }
+
+  .faq-a {
+    @apply mt-2 text-sm;
+  }
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark .navbar {
+  @apply border-gray-700 bg-gray-800;
+}
+
+.dark .card,
+.dark .stat {
+  @apply border-gray-700 bg-gray-800 text-gray-100;
+}
+
+.dark .nav-links a {
+  @apply text-gray-200 hover:bg-gray-700;
+}
+
+.dark .nav-links a.active {
+  @apply bg-gray-700 text-blue-300;
+}
+
+.dark .muted {
+  @apply text-gray-400;
+}
+
+.dark .form-grid input,
+.dark .form-grid select,
+.dark .form-grid textarea,
+.dark .toolbar input,
+.dark .toolbar select {
+  @apply border-gray-600 bg-gray-900 text-gray-100;
+}
+
+.dark .badge {
+  @apply bg-gray-700 text-gray-200;
+}
+
+.dark .chip {
+  @apply border-gray-600 text-gray-200;
+}
+
+.dark .chip.active {
+  @apply border-blue-400 bg-gray-700 text-blue-200;
+}
+
+.dark .quick-links a {
+  @apply bg-gray-700 text-blue-200 hover:bg-gray-600;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.pulse { animation: pulse-soft 3s ease-in-out infinite; }
+.pulse-heart { animation: pulse-soft 1.2s ease-in-out infinite; }
+.float { animation: pulse-soft 4s ease-in-out infinite; }
+
+.ring {
+  animation: ring-draw 2s ease forwards;
+}
+
+@keyframes ring-draw {
+  to { stroke-dashoffset: 120; }
+}
+
+.beat {
+  animation: beat-draw 2.5s ease forwards;
+}
+
+@keyframes beat-draw {
+  to { stroke-dashoffset: 0; }
+}
